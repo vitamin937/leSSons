@@ -7,7 +7,7 @@ public class L5DZ {
 
 
         Person[] persArray = new Person[5];
-        persArray[0]  = new Person("ФИО",
+        persArray[0] = new Person("ФИО",
                 "должность",
                 "почта",
                 "телефон",
@@ -43,8 +43,7 @@ public class L5DZ {
                 23);
 
         for (int i = 0; i < persArray.length; i++) {
-            if( persArray[i].getAge() >= 40){
-            persArray[i].info();}
+            if( persArray[i].getAge() >= 40) persArray[i].info();
         }
     }
 }

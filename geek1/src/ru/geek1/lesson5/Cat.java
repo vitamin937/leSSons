@@ -37,14 +37,14 @@ public class Cat {
     }
 
     public void setAge(int age) {
-        if(age >= 0) {
+        if (age >= 0) {
             this.age = age;
-        }else {
+        } else {
             System.out.println("Возрвст не может быть меньше нуля");
         }
     }
 
-    void info(){
-        System.out.println(name + " " +color + " " + age);
+    void info() {
+        System.out.println(name + " " + color + " " + age);
     }
 }

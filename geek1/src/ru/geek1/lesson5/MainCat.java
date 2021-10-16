@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class MainCat {
     public static void main(String[] args) {
-        Cat cat1 = new Cat("qwer","qwer",12);
-        Cat cat2 = new Cat("qweq","asdf");
+        Cat cat1 = new Cat("qwer", "qwer", 12);
+        Cat cat2 = new Cat("qweq", "asdf");
 
         cat1.setName("Vaska");
         cat1.setColor("Black");
