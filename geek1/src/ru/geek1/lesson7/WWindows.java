@@ -6,6 +6,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class WWindows extends JFrame {
+    NextWindow nextWindow;
+    JLabel label1;
+    JLabel label2;
+
     public WWindows() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("First Window");
@@ -14,8 +18,8 @@ public class WWindows extends JFrame {
 
         JButton jButton = new JButton("OK");
         JButton jButtonNew = new JButton("Cancel");
-        JLabel label1 = new JLabel("");
-        JLabel label2 = new JLabel("");
+        label1 = new JLabel("");
+        label2 = new JLabel("");
 
         JPanel panel1 = new JPanel(new GridLayout(1, 2));
         panel1.add(jButton);
@@ -34,11 +38,13 @@ public class WWindows extends JFrame {
 
         add(panel3);
 
+        nextWindow = new NextWindow(this);
+        nextWindow.setVisible(false);
 
         jButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new NextWindow();
+                nextWindow.setVisible(true);
             }
         });
         jButtonNew.addActionListener(new ActionListener() {
@@ -47,8 +53,14 @@ public class WWindows extends JFrame {
                 System.exit(0);
             }
         });
+
+    }
+    void setParams(String name,String surname){
+        label1.setText(name);
+        label2.setText(surname);
     }
 }
+
 
 class MainWClass {
     public static void main(String[] args) {
