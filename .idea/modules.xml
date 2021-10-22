@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/comp/comp.iml" filepath="$PROJECT_DIR$/comp/comp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/geek1/geek1.iml" filepath="$PROJECT_DIR$/geek1/geek1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/leSSons.iml" filepath="$PROJECT_DIR$/.idea/leSSons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miniprilogenie/miniprilogenie.iml" filepath="$PROJECT_DIR$/miniprilogenie/miniprilogenie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rush/rush.iml" filepath="$PROJECT_DIR$/rush/rush.iml" />
+    </modules>
+  </component>
+</project>

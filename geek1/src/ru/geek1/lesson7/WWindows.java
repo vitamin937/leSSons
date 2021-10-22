@@ -7,8 +7,9 @@ import java.awt.event.ActionListener;
 
 public class WWindows extends JFrame {
     NextWindow nextWindow;
-    JLabel label1;
-    JLabel label2;
+    JLabel jname;
+    JLabel jsurname;
+    JLabel jpatronymic;
 
     public WWindows() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -18,25 +19,29 @@ public class WWindows extends JFrame {
 
         JButton jButton = new JButton("OK");
         JButton jButtonNew = new JButton("Cancel");
-        label1 = new JLabel("");
-        label2 = new JLabel("");
+        jname = new JLabel("");
+        jsurname = new JLabel("");
+        jpatronymic = new JLabel("");
+        JLabel name = new JLabel("Имя:");
+        JLabel surname = new JLabel("Фамилия:");
+        JLabel patronymic = new JLabel("Отчество:");
+
 
         JPanel panel1 = new JPanel(new GridLayout(1, 2));
         panel1.add(jButton);
         panel1.add(jButtonNew);
 
-        JPanel panel2 = new JPanel(new GridLayout(2, 1));
-        panel2.add(label1);
-        panel2.add(label2);
+        JPanel panel2 = new JPanel(new GridLayout(3, 2));
+        panel2.add(name);
+        panel2.add(jname);
+        panel2.add(surname);
+        panel2.add(jsurname);
+        panel2.add(patronymic);
+        panel2.add(jpatronymic);
 
-        panel1.setPreferredSize(new Dimension(100, 70));
-        panel2.setPreferredSize(new Dimension(100, 70));
+        add(panel1, BorderLayout.SOUTH);
+        add(panel2, BorderLayout.NORTH);
 
-        JPanel panel3 = new JPanel(new GridLayout(2, 1));
-        panel3.add(panel2);
-        panel3.add(panel1);
-
-        add(panel3);
 
         nextWindow = new NextWindow(this);
         nextWindow.setVisible(false);
@@ -55,9 +60,10 @@ public class WWindows extends JFrame {
         });
 
     }
-    void setParams(String name,String surname){
-        label1.setText(name);
-        label2.setText(surname);
+    void setParams(String name,String surname,String patronymic){
+        jname.setText(name);
+        jsurname.setText(surname);
+        jpatronymic.setText(patronymic);
     }
 }
 
